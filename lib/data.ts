@@ -22,7 +22,8 @@ const fetchData = async () => {
   });
 
   const parsedData = await data.json();
-  console.log(JSON.stringify(parsedData, null, 2));
+
+  return parsedData.data;
 };
 
 export default fetchData;

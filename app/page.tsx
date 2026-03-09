@@ -1,7 +1,9 @@
 import fetchData from "@/lib/data";
+
 export default async function Home() {
   const imageData = await fetchData();
   const photos = imageData.photos;
+
   return (
     <div className="px-2 py-2 bg-neutral-900">
       <div className="px-10 py-10">

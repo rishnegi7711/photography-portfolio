@@ -1,4 +1,6 @@
-const fetchData = async () => {
+import { Photo } from "./types";
+
+const fetchData = async (): Promise<{ photos: Photo[] }> => {
   const data = await fetch(`${process.env.HYGRAPH_ENDPOINT}`, {
     method: "POST",
     headers: {
@@ -22,7 +24,6 @@ const fetchData = async () => {
   });
 
   const parsedData = await data.json();
-
   return parsedData.data;
 };
 

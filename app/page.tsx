@@ -1,5 +1,6 @@
 import fetchData from "@/lib/data";
 import Image from "next/image";
+
 export default async function Home() {
   const imageData = await fetchData();
   const photos = imageData.photos;

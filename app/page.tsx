@@ -1,5 +1,5 @@
 import fetchData from "@/lib/data";
-
+import Image from "next/image";
 export default async function Home() {
   const imageData = await fetchData();
   const photos = imageData.photos;
@@ -16,12 +16,14 @@ export default async function Home() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {photos.map((photo) => {
           return (
-            <img
-              key={photo.id}
-              src={photo.picture.url}
-              alt={photo.title}
-              className="w-full h-full object-cover "
-            />
+            <div key={photo.id} className="h-96 relative">
+              <Image
+                src={photo.picture.url}
+                alt={photo.title}
+                className="w-full h-full object-cover "
+                fill={true}
+              />
+            </div>
           );
         })}
       </div>

@@ -6,5 +6,7 @@ export type Photo = {
   featured: boolean | null;
   picture: {
     url: string;
+    height: number;
+    width: number;
   };
 };

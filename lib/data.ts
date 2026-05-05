@@ -16,7 +16,13 @@ const fetchData = async (): Promise<{ photos: Photo[] }> => {
             lens
             featured
          		picture{
-              url
+              url(
+              transformation: {
+              image:{compress:{metadata: true}}
+              }
+              )
+              height
+              width
             }
           }
         }`,

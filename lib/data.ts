@@ -9,7 +9,7 @@ const fetchData = async (): Promise<{ photos: Photo[] }> => {
     },
     body: JSON.stringify({
       query: `query myQuery{
-          photos{
+          photos(first: 50){
             title
             id
             camera
@@ -26,6 +26,7 @@ const fetchData = async (): Promise<{ photos: Photo[] }> => {
             }
           }
         }`,
+      next: { revalidate: 3600 },
     }),
   });
 

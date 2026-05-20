@@ -6,7 +6,7 @@ export default async function Home() {
   const photos = imageData.photos;
 
   return (
-    <div className="px-2 py-2 pt-25 bg-neutral-900 min-h-screen">
+    <div className="px-2 py-2 pt-25 min-h-screen">
       <div className="px-10 py-10">
         <h1 className="text-7xl text-white ">Rishi</h1>
         <h2 className="italic text-4xl text-white ">
